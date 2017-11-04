@@ -1,0 +1,11 @@
+{
+  "name": "hard_base_n",
+  "version": "1.0.0",
+  "description": "node base study",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test"
+  },
+  "author": "xiongxiong109",
+  "license": "ISC"
+}

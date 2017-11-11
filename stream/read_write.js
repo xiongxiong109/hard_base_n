@@ -3,7 +3,10 @@ const path = require('path');
 const StreamReader = require('./_read');
 const WriteStream = require('./_write');
 
-let fileStream = fs.createReadStream(path.join(__dirname, 'index.html'));
+let fileStream = fs.createReadStream(path.join(__dirname, 'index.html'), 'utf8');
 let buffer = Buffer('xiongxiong109');
 let reader = new StreamReader(fileStream);
-let writer = new WriteStream(reader);
+
+reader.on('update', data => {
+    console.log(data);
+})

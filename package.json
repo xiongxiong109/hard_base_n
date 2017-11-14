@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/xiongxiong109/hard_base_n/issues"
   },
-  "homepage": "https://github.com/xiongxiong109/hard_base_n#readme"
+  "homepage": "https://github.com/xiongxiong109/hard_base_n#readme",
+  "dependencies": {
+    "node-uuid": "^1.4.8"
+  }
 }

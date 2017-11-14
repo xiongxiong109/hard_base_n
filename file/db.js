@@ -36,6 +36,23 @@ class DataBase extends EventEmitter {
             })
         })
     }
+    findAll() {
+        let dataArr = [];
+        return new Promise((resolve, reject) => {
+            fs.readFile(this._dbFile, {
+                encoding: 'utf8'
+            }, (err, data) => {
+                if (err) {
+                    reject(err)
+                }
+                dataArr = data.split('\n');
+                dataArr = dataArr.map(jsonStr => {
+                    return JSON.parse(jsonStr);
+                });
+                resolve(dataArr);
+            })
+        })
+    }
     findById(id) {}
     deleteById(id) {}
     updateById(id) {}

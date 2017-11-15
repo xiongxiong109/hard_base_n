@@ -25,7 +25,7 @@ class DataBase extends EventEmitter {
             let json = Object.assign({}, opts, {
                 _id: v4()
             })
-            fs.appendFile(this._dbFile, `${JSON.stringify(json)}\n`, {
+            fs.appendFile(this._dbFile, `\n${JSON.stringify(json)}`, {
                 encoding: 'utf8'
             }, err => {
                 if (err) {

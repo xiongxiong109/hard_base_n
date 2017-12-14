@@ -6,7 +6,7 @@ let req = http.request({
   port: 8099
 }, res => {
   res.on('data', data => {
-    console.log(data);
+    console.log(data.toString());
   });
 });
 

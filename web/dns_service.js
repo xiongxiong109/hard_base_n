@@ -9,3 +9,15 @@ dns.lookup('nodejs.cn', (err, addr, fm) => {
     console.log(fm);
   }
 });
+
+dns.resolve4('www.baidu.com', (err, address) => {
+  console.log(address);
+});
+
+dns.resolve6('www.baidu.com', (err, address) => {
+  console.log(address);
+});
+
+dns.resolve('www.baidu.com', (err, address) => {
+  console.log(address);
+});

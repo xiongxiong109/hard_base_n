@@ -12,6 +12,7 @@ const clientOptions = {
 
 // 连接
 const tlsContextStream = tls.connect(8088, clientOptions, () => {
+  console.log(tlsContextStream)
   console.log('save tcp connected');
 });
 

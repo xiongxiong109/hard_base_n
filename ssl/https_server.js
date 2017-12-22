@@ -12,7 +12,7 @@ const options = {
 
 const server = https.createServer(options, (req, res) => {
   let { authorized } = req.socket;
-  console.log(req.socket);
+  console.log(req.socket.authorized);
   res.writeHead(200);
   res.write(`Hello Https, u r ${authorized ? 'authorized': 'unauthorized'}`);
   res.end();

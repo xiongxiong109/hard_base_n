@@ -9,7 +9,9 @@ const cp = require('child_process');
 // });
 
 // 基于流的spawn, 第一个参数传递指令, 后面的数组传递指令执行的参数
-let stream = cp.spawn('cat', ['./child.js']);
+let stream = cp.spawn('cat', ['./child.js'], {
+  detached: true // 分离子进程
+});
 // let stream = cp.spawn('fis3', ['-v']);
 
 stream.stdout.on('data', data => console.log(data.toString()));

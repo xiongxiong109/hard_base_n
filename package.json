@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/xiongxiong109/hard_base_n#readme",
   "dependencies": {
+    "express": "^4.16.2",
     "node-uuid": "^1.4.8"
+  },
+  "devDependencies": {
+    "easy-monitor": "^2.2.1",
+    "heapdump": "^0.3.9"
   }
 }

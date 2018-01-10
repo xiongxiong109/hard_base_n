@@ -4,6 +4,7 @@ const child = cp.fork('./child');
 
 child.on('message', msg => {
   console.log(msg);
+  child.kill(); // 需要杀死子进程, 否则子进程会一直存在
 });
 
 child.send('Hey');

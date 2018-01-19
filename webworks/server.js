@@ -19,20 +19,21 @@ const nconf = require('nconf');
 nconf
   .env()
   .argv()
-  .file('appSettings', path.join(__dirname, '..', 'package.json'));
+  .file('appSettings', path.join(__dirname, '..', 'package.json'))
+  .file('testSetting', path.join(__dirname, 'test.json'));
+// 多个文件的时候, 同名字段会被覆盖???
 
 let ENV = nconf.get('NODE_ENV');
 let PORT = nconf.get('PORT');
-let appSettings = nconf.get('appSettings');
-console.log(appSettings);
+let nm = nconf.get('name');
 const port = PORT || 8080;
 const app = express();
 const router = express.Router();
 
 router.get('/', (req, res) => {
   res.send(Object.assign({}, {
-    ENV, port
-  }, appSettings));
+    ENV, port, nm
+  }));
 });
 
 app.use('/', router);

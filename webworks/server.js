@@ -15,6 +15,7 @@ const http = require('http');
 const path = require('path');
 const express = require('express');
 const nconf = require('nconf');
+const ErrorHandle = require('./middlewares/errorHandler');
 // nconf configs
 nconf
   .env()
@@ -30,13 +31,15 @@ const port = PORT || 8080;
 const app = express();
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', (req, res, next) => {
   res.send(Object.assign({}, {
     ENV, port, nm
   }));
+  next(new Error('fake error')); // 抛出一个异常错误
 });
 
 app.use('/', router);
+app.use(ErrorHandle); // 当前面的中间件中有抛出异常的时候, 就会触发这个error中间件
 
 const server = http.createServer(app);
 server.listen(port, (err) => {

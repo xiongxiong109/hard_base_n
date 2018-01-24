@@ -15,34 +15,29 @@ const http = require('http');
 const path = require('path');
 const express = require('express');
 const nconf = require('nconf');
+const router = require('./routes');
 const ErrorHandle = require('./middlewares/errorHandler');
 // nconf configs
 nconf
   .env()
   .argv()
   .file('appSettings', path.join(__dirname, '..', 'package.json'))
-  .file('testSetting', path.join(__dirname, 'test.json'));
 // 多个文件的时候, 同名字段会被覆盖???
 
-let ENV = nconf.get('NODE_ENV');
-let PORT = nconf.get('PORT');
-let nm = nconf.get('name');
+const PORT = nconf.get('PORT');
 const port = PORT || 8080;
 const app = express();
-const router = express.Router();
-
-router.get('/', (req, res, next) => {
-  res.send(Object.assign({}, {
-    ENV, port, nm
-  }));
-  next(new Error('fake error')); // 抛出一个异常错误
-});
 
 app.use('/', router);
 app.use(ErrorHandle); // 当前面的中间件中有抛出异常的时候, 就会触发这个error中间件
 
 const server = http.createServer(app);
+
+// 初始化全局配置
+// nconf.save(err => {
+// if (err) {return new Error(err);}
 server.listen(port, (err) => {
   if (err) {return new Error(err.stack)}
   console.log(`server is running on port ${port}`);
 });
+// });

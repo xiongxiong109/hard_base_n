@@ -28,6 +28,7 @@ const PORT = nconf.get('PORT');
 const port = PORT || 8080;
 const app = express();
 
+app.use('/static/', express.static(path.join(__dirname, 'public')));
 app.use('/', router);
 app.use(ErrorHandle); // 当前面的中间件中有抛出异常的时候, 就会触发这个error中间件
 

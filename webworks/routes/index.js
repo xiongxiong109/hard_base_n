@@ -5,11 +5,13 @@ const path = require('path')
 const nconf = require('nconf')
 
 router.get('/', (req, res) => {
+  req.app.emit('req:start', req.path);
   let ENV = nconf.get('NODE_ENV')
   let nm = nconf.get('name')
   res.send({
     ENV, nm
   });
+  req.app.emit('req:end', req.path);
   // next(new Error('fake error')); // 抛出一个异常错误
 });
 

@@ -32,6 +32,15 @@ app.use('/static/', express.static(path.join(__dirname, 'public')));
 app.use('/', router);
 app.use(ErrorHandle); // 当前面的中间件中有抛出异常的时候, 就会触发这个error中间件
 
+app.on('req:start', (msg) => {
+  console.time('request go');
+  console.log(msg);
+});
+app.on('req:end', (msg) => {
+  console.timeEnd('request go');
+  console.log(msg);
+});
+
 const server = http.createServer(app);
 
 // 初始化全局配置

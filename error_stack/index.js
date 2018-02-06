@@ -5,7 +5,13 @@ const { EventEmitter } = require('events');
 
 const ee = new EventEmitter();
 
-// ee.emit('error', 'a test for emit error'); // error 事件必须由new Error传递, 否则就是 uncaught error
+// 最后一道防线, 处理未捕获的异常
+process.on('uncaughtException', err => {
+  console.log('caught unExcepted Error!');
+  console.error(err);
+});
+
+ee.emit('error', 'a test for emit error'); // error 事件必须由new Error传递, 否则就是 uncaught error (正好可以让process的uncaughtException 来捕获)
 
 const handleError = (err) => {
   console.error('Failed Error: ', err.message);

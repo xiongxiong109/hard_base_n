@@ -5,10 +5,18 @@ const { EventEmitter } = require('events');
 
 const ee = new EventEmitter();
 
-// 最后一道防线, 处理未捕获的异常
+process.stdin.on('data', data => {
+  console.log(data.toString());
+});
+
+// 最后一道防线, 处理未捕获的异常(如果这样处理了之后, Node进程将不会被关闭, 有可能会导致内存泄漏)
 process.on('uncaughtException', err => {
+  // 最合适的处理方式是, 在这里捕获未捕获的异常, 发送log日志, 然后优雅地关闭掉进程
   console.log('caught unExcepted Error!');
   console.error(err);
+  // web server中在这里关闭server
+  // server.close();
+  setTimeout(process.exit, 5e3); // 等待五秒, 让其他连接运行后结束进程
 });
 
 ee.emit('error', 'a test for emit error'); // error 事件必须由new Error传递, 否则就是 uncaught error (正好可以让process的uncaughtException 来捕获)

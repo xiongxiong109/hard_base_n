@@ -6,13 +6,26 @@ const http = require('http')
 const app = require('./app')
 const server = http.createServer(app)
 const nconf = require('nconf');
-const replServer = require('./repl');
 const PORT = nconf.get('PORT');
+const replPort = nconf.get('REPL') || 8577;
 const port = PORT || 8080;
-const replPort = nconf.get('REPL') || 8577; // repl连接端口
+const net = require('net');
+const repl = require('repl');
 
 process.on('uncaughtException', (err) => {
   console.error('error', err.message, err.stack);
+});
+// 模块相互依赖的话存在引用问题
+const replServer = net.createServer(socket => {
+  let r = repl.start({
+    input: socket,
+    output: socket,
+    terminal: true
+  });
+  r.on('exit', () => {
+    socket.end();
+  });
+  r.context.server = server;
 });
 
 server.listen(port, (err) => {

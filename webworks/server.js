@@ -37,4 +37,5 @@ replServer.listen(replPort, (err) => {
   console.log(`repl server is running on port ${replPort}`)
 });
 
+// strace -o ${filename} ${excuteCmd}, 可以跟踪操作系统的调用信息.
 module.exports = server;

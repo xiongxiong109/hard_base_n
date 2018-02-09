@@ -1,0 +1,62 @@
+--- Process 17556 created
+--- Process 17556 loaded C:\Windows\System32\ntdll.dll at 0000000077AA0000
+--- Process 17556 loaded C:\Windows\System32\kernel32.dll at 0000000077980000
+--- Process 17556 loaded C:\Windows\System32\KernelBase.dll at 000007FEFD980000
+--- Process 17556 loaded C:\Windows\System32\ws2_32.dll at 000007FEFF7E0000
+--- Process 17556 loaded C:\Windows\System32\msvcrt.dll at 000007FEFFCF0000
+--- Process 17556 loaded C:\Windows\System32\rpcrt4.dll at 000007FEFEC60000
+--- Process 17556 loaded C:\Windows\System32\nsi.dll at 000007FEFED90000
+--- Process 17556 loaded C:\Windows\System32\winmm.dll at 000007FEFB440000
+--- Process 17556 loaded C:\Windows\System32\user32.dll at 0000000077880000
+--- Process 17556 loaded C:\Windows\System32\gdi32.dll at 000007FEFEF30000
+--- Process 17556 loaded C:\Windows\System32\lpk.dll at 000007FEFDB30000
+--- Process 17556 loaded C:\Windows\System32\usp10.dll at 000007FEFEFA0000
+--- Process 17556 loaded C:\Windows\System32\advapi32.dll at 000007FEFFC10000
+--- Process 17556 loaded C:\Windows\System32\sechost.dll at 000007FEFEB60000
+--- Process 17556 loaded C:\Windows\System32\IPHLPAPI.DLL at 000007FEFB090000
+--- Process 17556 loaded C:\Windows\System32\winnsi.dll at 000007FEFB080000
+--- Process 17556 loaded C:\Windows\System32\psapi.dll at 0000000077C40000
+--- Process 17556 loaded C:\Windows\System32\userenv.dll at 000007FEFDB00000
+--- Process 17556 loaded C:\Windows\System32\profapi.dll at 000007FEFD770000
+--- Process 17556 loaded C:\Windows\System32\imm32.dll at 000007FEFF0F0000
+--- Process 17556 loaded C:\Windows\System32\msctf.dll at 000007FEFDC60000
+--- Process 17556 loaded C:\Windows\System32\api-ms-win-core-synch-l1-2-0.dll at 000007FEF52C0000
+--- Process 17556 loaded C:\Windows\System32\mswsock.dll at 000007FEFD000000
+--- Process 17556 loaded C:\Windows\System32\WSHTCPIP.DLL at 000007FEFC910000
+--- Process 17556 loaded C:\Windows\System32\wship6.dll at 000007FEFCFF0000
+--- Process 17556 thread 2136 created
+--- Process 17556 thread 12352 created
+--- Process 17556 thread 3812 created
+--- Process 17556 thread 12020 created
+--- Process 17556 loaded C:\Windows\System32\netapi32.dll at 000007FEFB7A0000
+--- Process 17556 loaded C:\Windows\System32\netutils.dll at 000007FEFCFB0000
+--- Process 17556 loaded C:\Windows\System32\srvcli.dll at 000007FEFD220000
+--- Process 17556 loaded C:\Windows\System32\wkscli.dll at 000007FEFB750000
+--- Process 17556 thread 12156 created
+--- Process 17556 thread 11448 created
+--- Process 17556 unloaded DLL at 000007FEFB7A0000
+--- Process 17556 unloaded DLL at 000007FEFB750000
+--- Process 17556 unloaded DLL at 000007FEFD220000
+--- Process 17556 unloaded DLL at 000007FEFCFB0000
+--- Process 17556 loaded C:\Windows\System32\cryptsp.dll at 000007FEFD190000
+--- Process 17556 loaded C:\Windows\System32\rsaenh.dll at 000007FEFCC80000
+--- Process 17556 loaded C:\Windows\System32\cryptbase.dll at 000007FEFD5B0000
+--- Process 17556 loaded C:\Windows\System32\pcwum.dll at 000007FEFCDE0000
+--- Process 17556 loaded C:\Windows\System32\dnsapi.dll at 000007FEFCE30000
+--- Process 17556 loaded C:\Windows\System32\dhcpcsvc6.dll at 000007FEFADF0000
+--- Process 17556 loaded C:\Windows\System32\dhcpcsvc.dll at 000007FEFAD60000
+--- Process 17556 loaded C:\Windows\System32\nlaapi.dll at 000007FEFB5C0000
+--- Process 17556 loaded C:\Windows\System32\NapiNSP.dll at 000007FEF89A0000
+--- Process 17556 loaded C:\Windows\System32\pnrpnsp.dll at 000007FEF87C0000
+--- Process 17556 loaded C:\Windows\System32\winrnr.dll at 000007FEF8780000
+--- Process 17556 thread 13088 created
+--- Process 17556 thread 12284 created
+--- Process 17556 thread 11448 exited with status 0x200
+--- Process 17556 thread 12020 exited with status 0x200
+--- Process 17556 thread 12352 exited with status 0x200
+--- Process 17556 thread 8308 exited with status 0x200
+--- Process 17556 thread 12284 exited with status 0x200
+--- Process 17556 thread 12156 exited with status 0x200
+--- Process 17556 thread 2136 exited with status 0x200
+--- Process 17556 thread 13088 exited with status 0x200
+--- Process 17556 exited with status 0x200

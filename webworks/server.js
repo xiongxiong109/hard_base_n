@@ -23,3 +23,5 @@ server.listen(port, (err) => {
 replServer.listen(replPort, (err) => {
   console.log(`repl server is running on port ${replPort}`)
 });
+
+module.exports = server;

@@ -6,11 +6,20 @@ const http = require('http')
 const app = require('./app')
 const server = http.createServer(app)
 const nconf = require('nconf');
-
+const replServer = require('./repl');
 const PORT = nconf.get('PORT');
 const port = PORT || 8080;
+const replPort = nconf.get('REPL') || 8577; // repl连接端口
+
+process.on('uncaughtException', (err) => {
+  console.error('error', err.message, err.stack);
+});
 
 server.listen(port, (err) => {
   if (err) {return new Error(err.stack)}
   console.log(`server is running on port ${port}`);
 })
+
+replServer.listen(replPort, (err) => {
+  console.log(`repl server is running on port ${replPort}`)
+});

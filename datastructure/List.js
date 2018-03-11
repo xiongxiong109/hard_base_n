@@ -36,7 +36,7 @@ class List {
         this._curIdx = 0;
     }
     moveToEnd() { // 访问列表的最后一个元素
-        this._curIdx = this._listSize;
+        this._curIdx = this._listSize - 1;
     }
     length() { // 
         return this._listSize;

@@ -1,0 +1,59 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'search',
+1 verbose cli   'vue' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 silly mapToRegistry name -/all
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry http://registry.cnpmjs.org/
+7 silly mapToRegistry data Result {
+7 silly mapToRegistry   raw: '-/all',
+7 silly mapToRegistry   scope: null,
+7 silly mapToRegistry   escapedName: null,
+7 silly mapToRegistry   name: null,
+7 silly mapToRegistry   rawSpec: '-/all',
+7 silly mapToRegistry   spec: '-/all',
+7 silly mapToRegistry   type: 'local' }
+8 silly mapToRegistry uri http://registry.cnpmjs.org/-/all
+9 info updateIndex C:\Users\Administrator\AppData\Roaming\npm-cache\registry.cnpmjs.org\-\all\.cache.json
+10 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+11 warn Building the local index for the first time, please be patient
+12 silly update-index fetching http://registry.cnpmjs.org/-/all
+13 verbose request uri http://registry.cnpmjs.org/-/all
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 14:58:08
+16 verbose request id 9736cdfa22c371b6
+17 http request GET http://registry.cnpmjs.org/-/all
+18 http 200 http://registry.cnpmjs.org/-/all
+19 verbose headers { server: 'nginx/1.4.6 (Ubuntu)',
+19 verbose headers   date: 'Sun, 11 Mar 2018 06:58:17 GMT',
+19 verbose headers   'content-type': 'application/json; charset=utf-8',
+19 verbose headers   'transfer-encoding': 'chunked',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'x-current-requests': '1',
+19 verbose headers   'x-readtime': '7546',
+19 verbose headers   'strict-transport-security': 'max-age=15768000',
+19 verbose headers   'content-encoding': 'gzip' }
+20 verbose stack Error: true true: -/all
+20 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+20 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+20 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:216:7
+20 verbose stack     at Gunzip.onEnd (zlib.js:227:5)
+20 verbose stack     at emitNone (events.js:91:20)
+20 verbose stack     at Gunzip.emit (events.js:185:7)
+20 verbose stack     at endReadableNT (_stream_readable.js:974:12)
+20 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:74:11)
+20 verbose stack     at process._tickCallback (internal/process/next_tick.js:98:9)
+21 verbose statusCode 200
+22 verbose cwd D:\workspace\node_works\hard_base_n
+23 error Windows_NT 6.1.7601
+24 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "search" "vue"
+25 error node v6.9.2
+26 error npm  v3.10.9
+27 error code E200
+28 error true true: -/all
+29 error If you need help, you may report this error at:
+29 error     <https://github.com/npm/npm/issues>
+30 verbose exit [ 1, true ]
